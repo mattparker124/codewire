@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS dbCodewire;
+
+CREATE DATABASE dbCodewire;
