@@ -23,7 +23,7 @@
 }
 
 .header-img-container {
-    background-image: url("../img/codewire-hp.webp");
+    background-image: url("/img/codewire-hp.webp");
     background-size: cover;
     background-attachment: fixed;
     background-position: 80%;
