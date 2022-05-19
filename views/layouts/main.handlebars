@@ -18,20 +18,20 @@
             <ul>
                 {{#if loggedIn}}
                 <li>
-                    <button href="">Logout</button>
+                    <a href="">Logout</a>
                 </li>
                 <li>
-                    <button href="">Post</button>
+                    <a href="">Post</a>
                 </li>
                 <li>
-                    <button href="">User</button>
+                    <a href="">User</a>
                 </li>
                 {{else}}
                 <li>
-                    <button href="">Login</button>
+                    <a href="">Login</a>
                 </li>
                 <li>
-                   <button href="">Signup</button>
+                   <a href="">Signup</a>
                 </li>
                 {{/if}}
             </ul>
@@ -42,6 +42,20 @@
     </div>
 
     <main>
+      <div class="dropdown">
+        <div class="projects">
+          <button class="btn-filters">Filters</button>
+        <ul>
+            <li><a href="">Dropdown Content</a></li>
+            <li><a href="">Dropdown Content</a></li>
+            <li><a href="">Dropdown Content</a></li>
+            <li><a href="">Dropdown Content</a></li>
+            <li><a href="">Dropdown Content</a></li>
+            <li><a href="">Dropdown Content</a></li>
+        </ul>
+        </div>
+      </div>
+
       {{{ body }}}
     </main>
     <footer>
