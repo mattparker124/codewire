@@ -15,9 +15,12 @@
             <h1 class="logo">C</h1>
         </div>
         <nav>
+            {{#if loggedIn}}
             <button id="logout" class="btn-no-style">logout</button>
+            {{else}}
             <a href="/login">login</a>
             <a href="/signup">signup</a>
+            {{/if}}
         </nav>
     </header>
     <div class="header-img-container">
@@ -32,8 +35,9 @@
     </footer>
   </div>
   
-  
+  {{#if loggedIn}}
   <script src="/javascript/logout.js"></script>
+  {{/if}}
   
 </body>
 
