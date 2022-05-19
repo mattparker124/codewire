@@ -15,12 +15,20 @@ Post.init(
             type: DataTypes.STRING,
             allowNull: false
         },
+        post_body: {
+            type: DataTypes.JSON,
+            allowNull: false
+        },
         user_id: {
             type: DataTypes.INTEGER,
             reference: {
                 model: 'user',
                 key: 'id'
             }
+        },
+        tag: {
+            type: DataTypes.STRING,
+            allowNull: false
         }
     },
     {

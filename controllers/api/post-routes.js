@@ -8,6 +8,8 @@ router.get('/', (req, res) => {
         attributes: [
             'id',
             'title',
+            'tag',
+            'post_body',
             'created_at'
         ],
         order: [['created_at', 'DESC']],
@@ -25,7 +27,7 @@ router.get('/', (req, res) => {
     });
 });
 
-// GET a single post
+// GET a single post by id
 router.get('/:id', (req, res) => {
     Post.findOne({
         where: {
@@ -34,6 +36,8 @@ router.get('/:id', (req, res) => {
         attributes: [
             'id',
             'title',
+            'tag',
+            'post_body',
             'created_at'
         ],
         include: [
@@ -56,12 +60,80 @@ router.get('/:id', (req, res) => {
     });
 });
 
+// GET all posts by tag
+router.get('/tag/:tag', (req, res) => {
+    Post.findAll({
+        where: {
+            tag: req.params.tag
+        },
+        attributes: [
+            'id',
+            'title',
+            'tag',
+            'post_body',
+            'created_at'
+        ],
+        include: [
+            {
+                model: User,
+                attributes: ['username']
+            }
+        ]
+    })
+    .then(dbPostData => {
+        if (!dbPostData) {
+            res.status(404).json({ message: 'No post found with this tag' });
+            return;
+        }
+        res.json(dbPostData);
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
+
+// GET all posts by user id
+router.get('/user/:user_id', (req, res) => {
+    Post.findAll({
+        where: {
+            user_id: req.params.user_id
+        },
+        attributes: [
+            'id',
+            'title',
+            'tag',
+            'post_body',
+            'created_at'
+        ],
+        include: [
+            {
+                model: User,
+                attributes: ['username']
+            }
+        ]
+    })
+    .then(dbPostData => {
+        if (!dbPostData) {
+            res.status(404).json({ message: 'No post found with this tag' });
+            return;
+        }
+        res.json(dbPostData);
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
+
 // POST a new post
 router.post('/', (req, res) => {
-    // expects {title: 'Taskmaster goes public!', user_id: 1}
+    // expects {title: 'Update a comment', tag: 'PUT', user_id: 1}
     Post.create({
         title: req.body.title,
-        user_id: req.body.user_id
+        user_id: req.body.user_id,
+        post_body: req.body.post_body,
+        tag: req.body.tag
     })
     .then(dbPostData => res.json(dbPostData))
     .catch(err => {
@@ -74,7 +146,8 @@ router.post('/', (req, res) => {
 router.put('/:id', (req, res) => {
     Post.update(
         {
-            title: req.body.title
+            title: req.body.title,
+            post_body: req.body.post_body
         },
         {
             where: {
