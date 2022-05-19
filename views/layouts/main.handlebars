@@ -15,26 +15,9 @@
             <h1 class="logo">C</h1>
         </div>
         <nav>
-            <ul>
-                {{#if loggedIn}}
-                <li>
-                    <a href="">Logout</button>
-                </li>
-                <li>
-                    <a href="">Post</button>
-                </li>
-                <li>
-                    <a href="">User</button>
-                </li>
-                {{else}}
-                <li>
-                    <a href="/login">Login</a>
-                </li>
-                <li>
-                   <a href="/signup">Signup</button>
-                </li>
-                {{/if}}
-            </ul>
+            <button id="logout" class="btn-no-style">logout</button>
+            <a href="/login">login</a>
+            <a href="/signup">signup</a>
         </nav>
     </header>
     <div class="header-img-container">
@@ -49,9 +32,9 @@
     </footer>
   </div>
   
-  {{#if loggedIn}}
+  
   <script src="/javascript/logout.js"></script>
-  {{/if}}
+  
 </body>
 
 </html>
