@@ -1,6 +1,6 @@
 const sequelize = require('../../config/connection');
 const router = require('express').Router();
-const { Post, User } = require('../../models');
+const { Post, User, Vote, Comment } = require('../../models');
 
 // GET all posts
 router.get('/', (req, res) => {
@@ -10,10 +10,22 @@ router.get('/', (req, res) => {
             'title',
             'tag',
             'post_body',
-            'created_at'
+            'created_at',
+            [
+                sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'),
+                'vote_count'
+            ]
         ],
         order: [['created_at', 'DESC']],
         include: [
+            {
+                model: Comment,
+                attributes: ['id', 'comment_body', 'post_id', 'user_id', 'created_at'],
+                include: {
+                    model: User,
+                    attributes: ['username']
+                }
+            },
             {
                 model: User,
                 attributes: ['username']
@@ -38,9 +50,21 @@ router.get('/:id', (req, res) => {
             'title',
             'tag',
             'post_body',
-            'created_at'
+            'created_at',
+            [
+                sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'),
+                'vote_count'
+            ]
         ],
         include: [
+            {
+                model: Comment,
+                attributes: ['id', 'comment_body', 'post_id', 'user_id', 'created_at'],
+                include: {
+                    model: User,
+                    attributes: ['username']
+                }
+            },
             {
                 model: User,
                 attributes: ['username']
@@ -140,6 +164,18 @@ router.post('/', (req, res) => {
         console.log(err);
         res.json(500).json(err);
     });
+});
+
+// PUT /api/posts/upvote
+router.put('/upvote', (req, res) => {
+    if (req.session) {
+        Post.upvote({ ...req.body, user_id: req.session.user_id }, { Vote, Comment, User })
+        .then(updatedPostData => res.json(updatedPostData))
+        .catch(err => {
+            console.log(err);
+            res.status(400).json(err);
+        });
+    }
 });
 
 // Update a post by id
