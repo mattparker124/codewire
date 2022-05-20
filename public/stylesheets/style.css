@@ -210,8 +210,8 @@ footer{
     display: flex;
     flex-direction: column;
     margin: 30px;
-    margin-top: 150px;
-    margin-bottom: 150px;
+    margin-top: 170px;
+    margin-bottom: 170px;
 }
 
 .login-form div, .signup-form div {
