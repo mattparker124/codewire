@@ -74,7 +74,7 @@ header nav ul {
     list-style: none;
 }
   
-header nav ul li a {
+header nav a {
     padding: 10px 15px;
     font-weight: lighter;
     font-size: 1.55vw;
@@ -82,7 +82,7 @@ header nav ul li a {
     color: white;
 }
   
-header nav ul li a:hover {
+header nav a:hover {
     background: var(--secondary);
     color: var(--tertiary);
     border-radius: 15px;
