@@ -16,22 +16,14 @@
     
       <br>
 
-<section>
-    <div class="post-container row">
-      <div class="post col-3">
-        <h4 class="post-title"><a class="link" href="">Title</a></h4>
-        <p class="post-details">Posted by X on X </p>
-        <div class="content">
-          <p class="post-content">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tellus elementum sagittis vitae et. Nullam vehicula ipsum a arcu cursus vitae congue. Augue ut lectus arcu bibendum at. Mauris nunc congue nisi vitae suscipit tellus mauris a. Odio facilisis mauris sit amet massa vitae tortor condimentum lacinia. Enim ut sem viverra aliquet eget sit. Sed arcu non odio euismod lacinia at quis risus sed. Tincidunt tortor aliquam nulla facilisi. In nisl nisi scelerisque eu ultrices vitae auctor. Aliquam nulla facilisi cras fermentum odio eu feugiat. Felis imperdiet proin fermentum leo. Ut etiam sit amet nisl purus in mollis. Sed viverra ipsum nunc aliquet bibendum. Sem et tortor consequat id porta nibh. Donec pretium vulputate sapien nec sagittis aliquam malesuada bibendum arcu. Vitae elementum curabitur vitae nunc sed velit dignissim. Et tortor at risus viverra adipiscing. Senectus et netus et malesuada. Rhoncus mattis rhoncus urna neque viverra justo nec ultrices.
+<ol class="post-list">
+  {{#each posts as |post|}}
 
-        Suspendisse faucibus interdum posuere lorem ipsum dolor sit amet. Id neque aliquam vestibulum morbi blandit cursus risus at ultrices. Enim praesent elementum facilisis leo vel fringilla est ullamcorper. Lacus sed viverra tellus in hac habitasse platea dictumst vestibulum. Velit ut tortor pretium viverra suspendisse potenti nullam. Pulvinar etiam non quam lacus suspendisse faucibus interdum posuere lorem. A cras semper auctor neque vitae tempus quam. Vivamus arcu felis bibendum ut tristique et. A diam maecenas sed enim ut sem viverra aliquet eget. Sapien faucibus et molestie ac feugiat sed lectus vestibulum mattis. Et malesuada fames ac turpis egestas integer. Potenti nullam ac tortor vitae purus faucibus ornare suspendisse. Et ultrices neque ornare aenean euismod elementum nisi quis eleifend. Sed augue lacus viverra vitae congue eu consequat. Eget arcu dictum varius duis at. Mattis pellentesque id nibh tortor id aliquet lectus proin.
-          </p>
-        </div>
-        <div class="likes-comments">
-        </div>
-      </div>
-    </div>
-</section>
+  {{> post-info post}}
+
+  {{/each}}
+</ol>
+
+
 
 <script href="/public/javascript/search.js"></script>
