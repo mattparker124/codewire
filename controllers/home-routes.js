@@ -30,8 +30,10 @@ router.get('/', (req, res) => {
   })
     .then(dbPostData => {
       //get full list of posts
-      const posts = dbPostData.map(post => post.get({ plain: true }));
-      // pass a single post object into the homepage template
+      const rawPosts = dbPostData.map(post => post.get({ plain: true }));
+      //reverse the posts, so that the newest posts display first
+      const posts = rawPosts.reverse();
+      //render the homepage
       res.render('homepage', { posts });
     })
     .catch(err => {
