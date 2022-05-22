@@ -1,15 +1,22 @@
-<section>
-  <h2>Create New Post</h2>
+<article class="new-page">
+    <section class="new-form-page">
+        <div class="form-heading">
+            <h2>Create New Post</h2>
+        </div>
+        <div class="form-section">
+            <form class="new-post-form">
+                <div class="post-title-section">
+                    <label for="post-title">Title</label>
+                    <input type="text" id="post-title" name="post-title" />
+                </div>
+                <div class="post-body">
+                    <label for="post-body">Content</label>
+                    <textarea class="entry-field" id="post-body" name="post-body"></textarea>
+                </div>
+                <button type="submit" class="btn">Create</button>
+            </form>
+        </div>
+    </section>
+</article>
 
-  <form class="new-post-form">
-    <div>
-      <label for="post-title">Title</label>
-      <input type="text" id="post-title" name="post-title" />
-    </div>
-    <div>
-      <label for="post-url">Link</label>
-      <input id="post-url" name="post-url" />
-    </div>
-    <button type="submit" class="btn">Create</button>
-  </form>
-</section>
+<script src="/javascript/add-post.js"></script>

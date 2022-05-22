@@ -155,7 +155,7 @@ router.post('/', (req, res) => {
     // expects {title: 'Update a comment', tag: 'PUT', user_id: 1}
     Post.create({
         title: req.body.title,
-        user_id: req.body.user_id,
+        user_id: req.session.user_id,
         post_body: req.body.post_body,
         tag: req.body.tag
     })
