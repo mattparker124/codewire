@@ -1,16 +1,29 @@
+<section>
+  <div class="dropdown">
+    <div class="projects">
+      <button>Filters</button>
+        <ul>
+          <li><a href="">Dropdown Content</a></li>
+          <li><a href="">Dropdown Content</a></li>
+          <li><a href="">Dropdown Content</a></li>
+          <li><a href="">Dropdown Content</a></li>
+          <li><a href="">Dropdown Content</a></li>
+          <li><a href="">Dropdown Content</a></li>
+        </ul>
+      </div>
+    </div>
+</section>
+    
+      <br>
+
 <ol class="post-list">
-  <li>
-    <article class="post">
-      <div class="title">
-        <a href="{{post_url}}" target="_blank">{{title}}</a>
-        <span>({{post_url}})</span>
-      </div>
-      <div class="meta">
-        {{vote_count}} point(s) by {{user.username}} on
-        {{created_at}}
-        |
-        <a href="/post/{{id}}">{{comments.length}} comment(s)</a>
-      </div>
-    </article>
-  </li>
+  {{#each posts as |post|}}
+
+  {{> post-info post}}
+
+  {{/each}}
 </ol>
+
+
+
+<script href="/public/javascript/search.js"></script>

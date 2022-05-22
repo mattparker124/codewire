@@ -1,0 +1,18 @@
+<li>
+    <div class="post-container row">
+      <div class="post col-3">
+        <h4 class="post-title">{{title}}</h4> 
+        <p class="post-details">Posted by {{user.username}} on {{created_at}} </p>
+        <div class="content">
+          <p class="post-content">
+            {{post_body}}
+          </p>
+        </div>
+        <div class="likes-comments">
+        {{vote_count}} point(s)
+      
+        <a href="/post/{{id}}">{{comments.length}} comment(s)</a>
+      </div>
+      </div>
+    </div>
+</li>
