@@ -34,7 +34,10 @@ router.get('/', (req, res) => {
       //reverse the posts, so that the newest posts display first
       const posts = rawPosts.reverse();
       //render the homepage
-      res.render('homepage', { posts });
+      res.render('homepage', { 
+        posts,
+        loggedIn: req.session.loggedIn
+       });
     })
     .catch(err => {
       console.log(err);
