@@ -9,6 +9,9 @@
   <link rel="stylesheet" href="/stylesheets/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+<body>
+
+</body>
 
 <body>
 
@@ -18,23 +21,23 @@
         </div>
         <nav>
             {{#if loggedIn}}
+            <a href="/">All Posts</a>
+            <a href="/dashboard">Dashboard</a>
             <a href="" id="logout">Logout</a>
-            <a href="">Post</a>
-            <a href="">User</a>
             {{else}}
             <a href="/login">login</a>
             <a href="/signup">signup</a>
             {{/if}}
         </nav>
     </header>
-
-<section>
-  <div class="header-img-container">
-    <h1 class="app-title">Codewire</h1>
-  </div>
-</section>
-
+    <section>
+      <div class="header-img-container">
+        <h1 class="app-title">Codewire</h1>
+      </div>
+    </section>
+    <main>
       {{{ body }}}
+    </main>
       
 <footer class="row">
   <div class="codewire col-4">
