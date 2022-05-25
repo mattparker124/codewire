@@ -23,6 +23,7 @@
     top: 0;
     z-index: 9999;
     background-color: var(--primary);
+    border-bottom: 2px solid black;
 }
 
 .header-img-container {
@@ -32,6 +33,7 @@
     background-position: 80%;
     z-index: 9999;
     padding: 100px;
+    border-bottom: 3px solid black;
 }
   
 .app-title {
@@ -193,6 +195,7 @@ footer{
     width: 100%;
     margin: 0;
     bottom: 0;
+    border-top: 2px solid black;
 }
 
 .codewire {
@@ -204,9 +207,13 @@ footer{
     text-shadow: 2px 2px #1d1c1c;
 }
 
+.footer-h1 {
+    font-size: x-large;
+}
+
 /* login form */
 
-.login-form, .signup-form {
+.form {
     display: flex;
     flex-direction: column;
     margin: 30px;
@@ -214,7 +221,17 @@ footer{
     margin-bottom: 170px;
 }
 
-.login-form div, .signup-form div {
+.form-post {
+    margin-top: 0;
+}
+
+.form-heading {
+    text-align: center;
+    margin: 20px;
+    color: var(--primary)
+}
+
+.form div{
     margin: 0 auto;
 }
 
