@@ -13,6 +13,8 @@
     padding: 0;
 }
 
+/* header start */
+
 .header {
     padding: 20px 35px;
     display: flex;
@@ -23,6 +25,7 @@
     top: 0;
     z-index: 9999;
     background-color: var(--primary);
+    border-bottom: 2px solid black;
 }
 
 .header-img-container {
@@ -32,6 +35,7 @@
     background-position: 80%;
     z-index: 9999;
     padding: 100px;
+    border-bottom: 3px solid black;
 }
   
 .app-title {
@@ -87,12 +91,17 @@ header nav a:hover {
     text-shadow: none;
 }
 
+/* header end */
+
+/* dropdown start */
+
 .dropdown {
     height: 10vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin: auto;
+    z-index: 9;
 }
 
 .projects ul {
@@ -124,6 +133,8 @@ header nav a:hover {
     justify-content: center;
     align-items: center;
     height: 35px;
+    border: 1px solid black;
+    border-radius: .3rem;
 }
 
 .projects li:hover {
@@ -150,15 +161,28 @@ header nav a:hover {
     transform: translateY(0);
 } 
 
+/* dropdown end */
+
+/* posts start */
+.dashboard-container {
+    display: flex;
+    list-style: none;
+}
+
+.post-container {
+    flex-direction: row;
+}
+
 .post {
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin: 25px;
-    border: 3px solid var(--secondary);
+    border: 3px solid black;
     border-radius: .3rem;
     padding: 0;
-    margin: 55px;
+    margin-left: 55px;
+    margin-top: 55px;
+    margin-bottom: 15px;
 }
 
 .post-title, .post-details {
@@ -167,7 +191,7 @@ header nav a:hover {
     width: 100%;
     height: 100%;
     background-color: var(--primary);
-    border-bottom: 2px solid var(--secondary);
+    border-bottom: 2px solid black;
     padding: 10px;
 }
 
@@ -176,14 +200,83 @@ header nav a:hover {
     padding: 8px;
 }
 
+.likes-comments {
+    border-top: 2px solid black;
+    background-color: var(--primary);
+    width: 100%
+}
+
 .post-title, a, .post-details{
     color: #ffffff;
     font-weight: bold;
     text-shadow: 2px 2px #1d1c1c;
-
 }
 
-/* footer */
+.post-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.likes-comments a {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: white;
+    text-shadow: none;
+}
+
+/* posts end */
+
+/* comments start */
+
+.comment-form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 3px solid black;
+    border-radius: .3rem;
+    padding: 15px;;
+    margin-top: 2px;
+    margin-left: 55px;
+    margin-right: 55px;
+    margin-bottom: 10px;;
+}
+
+.button-container {
+    padding: 15px;
+}
+
+.comments {
+    display: flex;
+    flex-direction: row;
+    margin-left: 55px;
+    margin-bottom: 55px;
+}
+
+.comment {
+    border: 2px solid black;
+    padding: 15px;
+    margin-right: 10px;
+}
+
+.meta {
+    border-bottom: 1px solid black;
+    border-radius: .3rem;
+}
+
+.text {
+    padding: 10px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+/* comment end */
+
+/* footer start */
 
 footer{
     background-color: var(--primary);
@@ -193,6 +286,7 @@ footer{
     width: 100%;
     margin: 0;
     bottom: 0;
+    border-top: 2px solid black;
 }
 
 .codewire {
@@ -204,9 +298,15 @@ footer{
     text-shadow: 2px 2px #1d1c1c;
 }
 
-/* login form */
+.footer-h1 {
+    font-size: x-large;
+}
 
-.login-form, .signup-form {
+/* footer end */
+
+/* login/signup form start */
+
+.form {
     display: flex;
     flex-direction: column;
     margin: 30px;
@@ -214,7 +314,17 @@ footer{
     margin-bottom: 170px;
 }
 
-.login-form div, .signup-form div {
+.form-post {
+    margin-top: 0;
+}
+
+.form-heading {
+    text-align: center;
+    margin: 20px;
+    color: var(--primary)
+}
+
+.form div{
     margin: 0 auto;
 }
 
@@ -245,4 +355,60 @@ footer{
       stroke-linecap: round;
       stroke-linejoin: round;
       fill: none; 
+}
+
+/* login/signup form end */
+
+/* filter start */
+
+.filter-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
+}
+
+.filter-container li a {
+    text-shadow: none;
+    color: var(--primary)
+}
+
+/* filter end */
+
+/* edit post start */
+
+.list {
+    display: flex;
+    flex-direction: column;
+}
+
+.your-posts {
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.your-posts h2 {
+    display: flex;
+}
+
+.your-posts ol li {
+    list-style: none;
+}
+
+.list h2 {
+    color: var(--primary);
+    margin-bottom: 0;
+}
+
+.post-list {
+    margin-top: 15px;
+}
+
+.edit-link {
+    float:right;
+    color: royalblue;
+    text-shadow: none;
 }

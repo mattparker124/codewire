@@ -1,17 +1,18 @@
+<div class="dashboard-container">
 <article class="new-page">
     <section class="new-form-page">
         <div class="form-heading">
             <h2>Create New Post</h2>
         </div>
         <div class="form-section">
-            <form class="new-post-form">
+            <form class="form form-post new-post-form">
                 <div class="post-title-section">
-                    <label for="post-title">Title</label>
-                    <input type="text" id="post-title" name="post-title" />
+                    <label class="label-text" for="post-title">Title</label>
+                    <input class="input" type="text" id="post-title" name="post-title" />
                 </div>
                 <div class="tag-selection">
-                  <label for="tag-choice">Choose your route:</label>
-                    <select class="tag-dropdown" id="tag-choice" name="tag-choice">
+                  <label class="label-text" for="tag-choice">Choose your route:</label>
+                    <select class="input" class="tag-dropdown" id="tag-choice" name="tag-choice">
                       <option value="get">GET</option>
                       <option value="post">POST</option>
                       <option value="put">PUT</option>
@@ -19,27 +20,30 @@
                     </select>
                 </div>
                 <div class="post-body">
-                    <label for="post-body">Content</label>
-                    <textarea class="entry-field" id="post-body" name="post-body"></textarea>
+                    <label class="label-text" for="post-body">Content</label>
+                    <textarea class="input" class="entry-field" id="post-body" name="post-body"></textarea>
                 </div>
-                <button type="submit" class="btn">Create<i data-feather="plus-square"></i></button>
+                <div>
+                  <button type="submit" class="btn">Create</button>
+                </div>
             </form>
         </div>
     </section>
 </article>
 
 {{#if posts.length}}
-<section>
-  <h2>Your Posts</h2>
-  <ol>
-    {{#each posts as |post|}}
-    <li>
-      {{> post-info post}}
+<section class="your-posts">
+  <div class="list">
+    <h2>Your Posts</h2>
+    <div class="dashboard-container">
+      {{#each posts as |post|}}
       <a href="/edit/{{post.id}}" class="edit-link">Edit post</a>
-    </li>
-    {{/each}}
-  </ol>
+      {{> post-info post}}
+      {{/each}}
+    </div>
+  </div>
 </section>
 {{/if}}
+</div>
 
 <script src="/javascript/add-post.js"></script>

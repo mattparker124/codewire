@@ -1,20 +1,20 @@
-<section>
-          <li><a href="/tag/get" id="get-btn">GET</a></li>
-          <li><a href="/tag/put" id="put-btn">PUT</a></li>
-          <li><a href="/tag/post" id="post-btn">POST</a></li>
-          <li><a href="/tag/delete" id="delete-btn">DELETE</a></li>
+<section class="filter-container">
+  <div class="filter-items">
+    <li><a href="/tag/get" id="get-btn">GET</a></li>
+    <li><a href="/tag/put" id="put-btn">PUT</a></li>
+    <li><a href="/tag/post" id="post-btn">POST</a></li>
+    <li><a href="/tag/delete" id="delete-btn">DELETE</a></li>
+  </div>
 </section>
     
       <br>
-
-<ol class="post-list">
+<div class="dashboard-container">
   {{#each posts as |post|}}
 
   {{> post-info post}}
 
   {{/each}}
-</ol>
-
+</div> 
 
 
 <script href="/public/javascript/search.js"></script>
