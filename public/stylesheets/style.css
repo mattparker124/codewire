@@ -13,6 +13,8 @@
     padding: 0;
 }
 
+/* header start */
+
 .header {
     padding: 20px 35px;
     display: flex;
@@ -89,12 +91,17 @@ header nav a:hover {
     text-shadow: none;
 }
 
+/* header end */
+
+/* dropdown start */
+
 .dropdown {
     height: 10vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin: auto;
+    z-index: 9;
 }
 
 .projects ul {
@@ -126,6 +133,8 @@ header nav a:hover {
     justify-content: center;
     align-items: center;
     height: 35px;
+    border: 1px solid black;
+    border-radius: .3rem;
 }
 
 .projects li:hover {
@@ -151,6 +160,8 @@ header nav a:hover {
     pointer-events: all;
     transform: translateY(0);
 } 
+
+/* dropdown end */
 
 /* posts start */
 .dashboard-container {
@@ -211,6 +222,10 @@ header nav a:hover {
     text-shadow: none;
 }
 
+/* posts end */
+
+/* comments start */
+
 .comment-form {
     display: flex;
     align-items: center;
@@ -255,7 +270,9 @@ header nav a:hover {
     flex-direction: row;
 }
 
-/* footer */
+/* comment end */
+
+/* footer start */
 
 footer{
     background-color: var(--primary);
@@ -281,7 +298,9 @@ footer{
     font-size: x-large;
 }
 
-/* login form */
+/* footer end */
+
+/* login/signup form start */
 
 .form {
     display: flex;
@@ -333,3 +352,5 @@ footer{
       stroke-linejoin: round;
       fill: none; 
 }
+
+/* login/signup form end */
