@@ -1,0 +1,23 @@
+<article class="new-page">
+    <section class="new-form-page">
+        <div class="form-heading">
+            <h2>Edit Your Post</h2>
+        </div>
+        <div class="form-section">
+            <form class="new-post-form">
+                <div class="post-title-section">
+                    <label for="post-title">Title</label>
+                    <textarea class="entry-field" id="post-title" name="post-title">{{post.title}}</textarea>
+                </div>
+                <div class="post-body">
+                    <label for="post-body">Body</label>
+                    <textarea class="entry-field" id="post-body" name="post-body">{{post.post_body}}</textarea>
+                </div>
+                <button type="submit" class="btn">Submit Changes<i data-feather="plus-square"></i></button>
+            </form>
+        </div>
+    </section>
+</article>
+<p></p>
+
+<script src="/javascript/edit-post.js"></script>

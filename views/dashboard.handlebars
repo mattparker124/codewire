@@ -22,7 +22,7 @@
                     <label for="post-body">Content</label>
                     <textarea class="entry-field" id="post-body" name="post-body"></textarea>
                 </div>
-                <button type="submit" class="btn">Create</button>
+                <button type="submit" class="btn">Create<i data-feather="plus-square"></i></button>
             </form>
         </div>
     </section>
@@ -35,7 +35,7 @@
     {{#each posts as |post|}}
     <li>
       {{> post-info post}}
-      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+      <a href="/edit/{{post.id}}" class="edit-link">Edit post</a>
     </li>
     {{/each}}
   </ol>
