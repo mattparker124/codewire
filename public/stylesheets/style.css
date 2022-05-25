@@ -372,3 +372,43 @@ footer{
     text-shadow: none;
     color: var(--primary)
 }
+
+/* filter end */
+
+/* edit post start */
+
+.list {
+    display: flex;
+    flex-direction: column;
+}
+
+.your-posts {
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.your-posts h2 {
+    display: flex;
+}
+
+.your-posts ol li {
+    list-style: none;
+}
+
+.list h2 {
+    color: var(--primary);
+    margin-bottom: 0;
+}
+
+.post-list {
+    margin-top: 15px;
+}
+
+.edit-link {
+    float:right;
+    color: royalblue;
+    text-shadow: none;
+}
