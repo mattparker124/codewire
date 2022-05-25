@@ -91,6 +91,42 @@ router.get('/post/:id', (req, res) => {
     });
 });
 
+router.get('/tag/:tag', (req, res) => {
+  Post.findAll({
+      where: {
+          tag: req.params.tag
+      },
+      attributes: [
+          'id',
+          'title',
+          'tag',
+          'post_body',
+          'created_at'
+      ],
+      include: [
+          {
+              model: User,
+              attributes: ['username']
+          }
+      ]
+  })
+  .then(dbPostData => {
+    //get full list of posts
+    const rawPosts = dbPostData.map(post => post.get({ plain: true }));
+    //reverse the posts, so that the newest posts display first
+    const posts = rawPosts.reverse();
+    //render the homepage
+    res.render('homepage', { 
+      posts,
+      loggedIn: req.session.loggedIn
+     });
+  })
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
+});
+
 router.get('/login', (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/');
