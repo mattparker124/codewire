@@ -167,8 +167,12 @@ header nav a:hover {
 .dashboard-container {
     display: flex;
     list-style: none;
-    margin-bottom: 55px;;
 }
+
+.post-container {
+    flex-direction: row;
+}
+
 .post {
     display: flex;
     align-items: center;
@@ -354,3 +358,17 @@ footer{
 }
 
 /* login/signup form end */
+
+/* filter start */
+
+.filter-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
+}
+
+.filter-container li a {
+    text-shadow: none;
+    color: var(--primary)
+}
