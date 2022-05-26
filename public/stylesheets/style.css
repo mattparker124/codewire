@@ -182,9 +182,7 @@ header nav a:hover {
     border: 3px solid black;
     border-radius: .3rem;
     padding: 0;
-    margin-left: 55px;
-    margin-top: 55px;
-    margin-bottom: 15px;
+    margin: 50px;
 }
 
 .post-title, .post-details {
