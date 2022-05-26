@@ -165,12 +165,14 @@ header nav a:hover {
 
 /* posts start */
 .dashboard-container {
-    display: flex;
+    /* display: flex; */
+    justify-content: center;
     list-style: none;
 }
-
 .post-container {
-    flex-direction: row;
+    /* flex-direction: row; */
+    display: flex;
+    justify-content: center;
 }
 
 .post {
@@ -338,7 +340,7 @@ footer{
     border: 2px solid var(--primary)
 }
 
-.btn {
+.btn, .upvote-btn {
     background-color: var(--primary);
     color: white;
 }
