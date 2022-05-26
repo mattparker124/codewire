@@ -318,6 +318,12 @@ footer{
     margin-top: 0;
 }
 
+.new-post-form-edit {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 .form-heading {
     text-align: center;
     margin: 20px;

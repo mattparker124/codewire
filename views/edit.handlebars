@@ -4,14 +4,14 @@
             <h2>Edit Your Post</h2>
         </div>
         <div class="form-section">
-            <form class="new-post-form">
-                <div class="post-title-section">
+            <form class="form-post new-post-form-edit">
+                <div class="label-text">
                     <label for="post-title">Title</label>
-                    <textarea class="entry-field" id="post-title" name="post-title">{{post.title}}</textarea>
+                    <textarea class="entry-field input" id="post-title" name="post-title">{{post.title}}</textarea>
                 </div>
                 <div class="post-body">
-                    <label for="post-body">Body</label>
-                    <textarea class="entry-field" id="post-body" name="post-body">{{post.post_body}}</textarea>
+                    <label class="label-text" for="post-body">Body</label>
+                    <textarea class="entry-field input" id="post-body" name="post-body">{{post.post_body}}</textarea>
                 </div>
                 <button type="submit" class="btn">Submit Changes<i data-feather="plus-square"></i></button>
             </form>
