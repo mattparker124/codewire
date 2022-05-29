@@ -19,6 +19,7 @@ As a Programmer, I Want a community driven repository for code to save time and 
 * MySQL
 * Handlebars
 * Node
+* Feather Icons
 
 ## [Website](https://codewireapp.herokuapp.com/)
 
