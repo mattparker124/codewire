@@ -4,7 +4,11 @@ A place to connect developers and share code snippets.
 
 ## Description
 
+Codewire is a Code Repository in the form of a community blog. This app allows users to post, comment on and rate reusable snippets of code.
 
+We were motivated by how many Routes and Models we’ve had to make that were exactly or almost identical to one we’ve already written. We realized how much time an online repository for these snippets would save.
+
+As a Programmer, I Want a community driven repository for code to save time and effort.
 
 ## Built With
 
@@ -25,13 +29,7 @@ A place to connect developers and share code snippets.
 * [Garret Hobson](https://github.com/GartTheSkeleton)
 * [Matthew Parker](https://github.com/mattparker124)
 * [Nathaniel Hernandez](https://github.com/thetryworks)
-
-
-## Resources
-
-* [Open5e API](https://open5e.com/)
-* [Robohash API](https://robohash.org/)
-* [Foundation](https://get.foundation/index.html)
+* [Davon Brown](https://github.com/DavonHB)
 
 ## License
 
