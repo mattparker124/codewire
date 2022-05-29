@@ -18,7 +18,7 @@ A place to connect developers and share code snippets.
 
 ## [Website](https://codewireapp.herokuapp.com/)
 
-![ALT Text](assets/images/Codewire (2).jpg
+![ALT Text](assets/images/Codewire(2).jpg
 
 ## Authors
 
